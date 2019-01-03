@@ -1,6 +1,7 @@
 # Kommently #
 
 This is a global comment store for all URLs. You can share your comments and review points by visiting any site.
+[Check online](https://chrome.google.com/webstore/detail/kommently/djmgnjfimgaemfnoomggcpdomodiomfa?utm_source=chrome-ntp-icon)
 
 ### Key Points ###
 
