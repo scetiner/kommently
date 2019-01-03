@@ -1,0 +1,310 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Kommently",
+		"_postman_id": "fa7630b5-69ba-136b-158e-82d5f3b92967",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Page",
+			"request": {
+				"url": "http://localhost:9797/api/page",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic use your token",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"page\":{\n\t\t\"url\":\"https://facebook.com\"\n\t}\n}"
+				},
+				"description": "Each url should be created first if not exists"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Page",
+			"request": {
+				"url": {
+					"raw": "http://localhost:9797/api/page?url=https://facebook.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9797",
+					"path": [
+						"api",
+						"page"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "https://facebook.com",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic use your token",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"page\":{\n\t\t\"url\":\"https://hurriyet.com.tr/spor\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Page Comment",
+			"request": {
+				"url": "http://localhost:9797/api/comment",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic use your token",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"comment\":{\n\t\t\"user_id\":\"5b4f4c7563db0116b6f0b4f5\",\n\t\t\"page_id\":\"5b4f4cd963db0116b6f0b4f8\",\n\t\t\"body\":\"great social media platform\",\n\t\t\"user_score\":5\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"url": "http://localhost:9797/api/user",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic use your token",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user\":{\n\t\t\"email\": \"serifcetiner@gmail.com\",\n        \"id\": \"117322197953046882701\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"url": {
+					"raw": "http://localhost:9797/api/user?email=serifcetiner@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9797",
+					"path": [
+						"api",
+						"user"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "serifcetiner@gmail.com",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic use your token",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"page\":{\n\t\t\"url\":\"https://hurriyet.com.tr/spor\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Page Comments",
+			"request": {
+				"url": {
+					"raw": "http://localhost:9797/api/comment?id=5b4f4cd963db0116b6f0b4f8&index=1&size=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9797",
+					"path": [
+						"api",
+						"comment"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5b4f4cd963db0116b6f0b4f8",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "index",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "size",
+							"value": "10",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic use your token",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"page\":{\n\t\t\"url\":\"https://hurriyet.com.tr/spor\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Visit Page",
+			"request": {
+				"url": "http://localhost:9797/api/page/visit",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic use your token",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"page\":{\n\t\t\"url\":\"https://materializecss.com/\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Comment On Page",
+			"request": {
+				"url": {
+					"raw": "http://localhost:9797/api/comment/user?page_id=5b4f4cd963db0116b6f0b4f8&user_id=5b4f4c7563db0116b6f0b4f5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9797",
+					"path": [
+						"api",
+						"comment",
+						"user"
+					],
+					"query": [
+						{
+							"key": "page_id",
+							"value": "5b4f4cd963db0116b6f0b4f8",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "user_id",
+							"value": "5b4f4c7563db0116b6f0b4f5",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic use your token",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"page\":{\n\t\t\"url\":\"https://hurriyet.com.tr/spor\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

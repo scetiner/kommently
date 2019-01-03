@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "name": "Kommently",
+    "short_name": "Kommently",
+    "description": "Global comment store that every one can share their own ideas.",
+    "version": "1.2",
+    "icons": {
+        "16": "icon16.png",
+        "24": "icon24.png",
+        "32": "icon32.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "16": "icon16.png",
+            "24": "icon24.png",
+            "32": "icon32.png"
+        },
+        "default_popup": "index.html",
+        "default_title": "Kommently"
+    },
+    "background": {
+      "scripts": ["numeral.min.js","url_info.js"]
+    },
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "identity",
+        "identity.email",
+        "https://restipsum.com/"
+    ]
+}
